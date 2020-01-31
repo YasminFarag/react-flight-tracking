@@ -8,9 +8,9 @@ import FormateDate from "./components/FormateDate";
 
 export default () => {
   const [data, setData] = useState({});
-  const [flightNum, setFlight] = useState("100");
+  const [flightNum, setFlight] = useState("078");
   // const [date, setdate] = useState(new Date());
-  const [airline, setAirline] = useState("AA");
+  const [airline, setAirline] = useState("QR");
 
   const APP_KEY = APP_K;
   const flightData = async () => {
@@ -116,7 +116,7 @@ export default () => {
                     data.flightStatuses[0].flightDurations.airMinutes
                       ? data.flightStatuses[0].flightDurations.airMinutes
                       : data.flightStatuses[0].flightDurations
-                          .scheduledAirMinutes
+                          .scheduledBlockMinutes
                   }
                 />{" "}
                 hours
