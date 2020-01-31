@@ -1,0 +1,44 @@
+
+$textColor: black;
+$textAlign: center;
+$fontSize: 18px;
+$boxSizing: border-box;
+$borderRadius: 15px;
+/* $padding:7px;  */
+$width: 70px;
+$height: 40px;
+
+
+
+body {
+background-color:#ccc;
+}
+
+@import'./container.scss';
+
+
+.textheader {
+    color: $textColor;
+    text-align: $textAlign;
+    font-size: $fontSize;
+}
+.btn {
+    background-color:cornflowerblue;
+    /* padding: $padding; */
+    color: $textColor;
+    /* width: 70px; */
+    &:hover{
+        color: blueviolet;    
+    }
+    width: $width;
+    height:$height;
+}
+
+.input {
+    margin-left:37px
+}
+
+.second-container {
+    font-style: oblique;
+    text-align: center;
+}

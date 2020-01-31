@@ -1,0 +1,17 @@
+@mixin background() {
+    background-color: aliceblue;
+    
+}
+.themed-container {
+    @include background();
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: $boxSizing;
+    border: 2px solid whitesmoke;
+    border-radius: $borderRadius;
+    text-align: center;
+    width: auto;
+    margin: auto;
+}
