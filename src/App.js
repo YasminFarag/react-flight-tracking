@@ -8,9 +8,9 @@ import FormateDate from "./components/FormateDate";
 
 export default () => {
   const [data, setData] = useState({});
-  const [flightNum, setFlight] = useState("078");
+  const [flightNum, setFlight] = useState("100");
   // const [date, setdate] = useState(new Date());
-  const [airline, setAirline] = useState("QR");
+  const [airline, setAirline] = useState("AA");
 
   const APP_KEY = APP_K;
   const flightData = async () => {
