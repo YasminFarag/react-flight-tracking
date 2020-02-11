@@ -9,7 +9,7 @@ import FormateDate from "./components/FormateDate";
 export default () => {
   const [data, setData] = useState({});
   const [flightNum, setFlight] = useState("100");
-  // const [date, setdate] = useState(new Date());
+   const [date, setdate] = useState(new Date());
   const [airline, setAirline] = useState("AA");
 
   const APP_KEY = APP_K;
@@ -96,12 +96,14 @@ export default () => {
           {data.flightStatuses.length && (
             <div className="second-container">
               <h1>Result : </h1>
-          <h3>Flight Number: {data.flightStatuses[0].flightNumber}</h3>
+              <h3>Flight Number: {data.flightStatuses[0].flightNumber}</h3>
               <h3>
                 From : {data.flightStatuses[0].departureAirportFsCode} To :{" "}
                 {data.flightStatuses[0].arrivalAirportFsCode}
               </h3>
-              <h3>Flight Status: <Result status={data.flightStatuses[0].status} /></h3>
+              <h3>
+                Flight Status: <Result status={data.flightStatuses[0].status} />
+              </h3>
               <h3>
                 {" "}
                 Arrival Time: {data.flightStatuses[0].arrivalDate.dateLocal}
@@ -121,11 +123,22 @@ export default () => {
                 />{" "}
                 hours
               </h3>
-                <h3> Departure Gate: {data.flightStatuses[0].airportResources.departureGate}</h3>
-                <h3> Arrival Gate: {data.flightStatuses[0].airportResources.arrivalTerminal}</h3>
-                {/* <h3> Baggages Belt: {data.flightStatuses[0].airportResources.baggage}</h3> */}
+              <h3>
+                {" "}
+                Departure Gate:{" "}
+                {data.flightStatuses[0].airportResources.departureGate}
+              </h3>
+              <h3>
+                {" "}
+                Arrival Gate:{" "}
+                {data.flightStatuses[0].airportResources.arrivalTerminal}
+              </h3>
+              {/* <h3> Baggages Belt: {data.flightStatuses[0].airportResources.baggage}</h3> */}
             </div>
           )}
+          {
+            data.flightStatuses && data.flightStatuses.lenght === 0  && <h1>Sorry NO Flights Available Right Now !!!</h1>
+          }
         </div>
       )}
     </div>
