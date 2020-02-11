@@ -20,7 +20,7 @@ export default () => {
     console.log(data);
     try {
       const response = await fetch(
-        `https://cors-anywhere.herokuapp.com/https://api.flightstats.com/flex/flightstatus/rest/v2/json/flight/status/${airline}/${flightNum}/dep/2020/2/1?appId=${appId}&appKey=${APP_KEY}`
+        `https://cors-anywhere.herokuapp.com/https://api.flightstats.com/flex/flightstatus/rest/v2/json/flight/status/${airline}/${flightNum}/dep/2020/2/11?appId=${appId}&appKey=${APP_KEY}`
       );
 
       // throw an error if response doesn't exist
